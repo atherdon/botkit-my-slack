@@ -124,3 +124,9 @@ https://github.com/howdyai/botkit/blob/master/docs/slack-events-api.md
 
 https://glitch.com/edit/#!/imported-crayon
 https://imported-crayon.glitch.me/
+
+https://github.com/BeepBoopHQ
+
+
+This is a simple clone of Bugbot bot, using botkit framework.
+Some things can work buggy
