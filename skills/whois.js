@@ -1,1 +1,2 @@
-whois.js - whoam i
+// whois.js - whoam i
+module.exports = function(controller) {};

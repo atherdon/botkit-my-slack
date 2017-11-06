@@ -1,1 +1,1 @@
-help2.js
+module.exports = function(controller) {};

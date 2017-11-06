@@ -1,1 +1,3 @@
-slash-commands.js
+module.exports = function(webserver, controller) {
+	
+};

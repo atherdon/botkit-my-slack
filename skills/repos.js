@@ -1,1 +1,1 @@
-repos.js
+module.exports = function(controller) {};

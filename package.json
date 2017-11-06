@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "dev"  : "nodemon bot.js"
+    "dev"  : "DEBUG=*.* && nodemon bot.js"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -35,5 +35,8 @@
     "slack"
   ],
   "author": "ben@howdy.ai",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+     "node": "8.9.0"
+  }
 }
