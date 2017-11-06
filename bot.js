@@ -108,6 +108,19 @@ require("fs").readdirSync(normalizedPath).forEach(function(file) {
   require("./skills/" + file)(controller);
 });
 
+
+const Raven = require('raven');
+
+// Must configure Raven before doing anything else with it
+Raven.config('https://0e73efde6a834eff8a26253c87aba0b4:83ea1e131a8440e6958b6e05c74ab905@sentry.io/240356').install();
+
+// The request handler must be the first middleware on the app
+webserver.use(Raven.requestHandler());
+
+// The error handler must be before any other error middleware
+webserver.use(Raven.errorHandler());
+
+
 // This captures and evaluates any message sent to the bot as a DM
 // or sent to the bot in the form "@bot message" and passes it to
 // Botkit Studio to evaluate for trigger words and patterns.
