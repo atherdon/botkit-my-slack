@@ -162,8 +162,31 @@ module.exports = function(controller) {
     });
     
     
-});
+  });
    
+  
+  controller.on(['settings', 'set (.*)'], 'direct_message', (bot, message) => {
+    
+    let list = [
+      '<detault settings repo>',
+      '<second>',
+      '<third>',
+      
+      'other',
+      
+      'logout'
+    ];
+    list.forEach(function(element, index) {
+          
+          //attachments[index].text = 'https://github.com/atherdon/' + list[index] + '/';
+      });
+        console.log(list);
+    bot.reply(message, list);
+    
+    
+  });
+  
+  
     // simple function to generate the text of the task list so that
     // it can be used in various places
     function generateTaskList(user) {
@@ -177,4 +200,5 @@ module.exports = function(controller) {
         return text;
 
     }
-}
+  
+};
