@@ -75,6 +75,12 @@ module.exports = function(webserver, controller) {
     // your value should be https://<my custom domain or IP>/oauth
     debug('Configured /oauth url');
     webserver.get('/giti', handler.oauth);
+  
+    // this is a just ma test  
+    debug('Configured /oauth url');
+    webserver.get('/giti2', (req,res) => {
+      console.log('ta what a fuck');
+    });
 
     return handler;
 }
