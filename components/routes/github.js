@@ -81,6 +81,10 @@ module.exports = function(webserver, controller) {
     webserver.get('/giti2', (req,res) => {
       console.log('ta what a fuck');
     });
+  
+    webserver.get('/logout', (req,res) => {
+      console.log('ta what a fuck');
+    });
 
     return handler;
 }
