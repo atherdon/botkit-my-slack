@@ -137,6 +137,18 @@ module.exports = function(controller) {
           case '/repos':
             bot.replyPrivate(message, 'boopbeep')
             break
+          case '/task':
+            bot.replyPrivate(message, 'boopbeep')
+            break  
+          
+          case '/repo':
+            bot.replyPrivate(message, 'boopbeep')
+            break 
+          
+          case '/whoami':
+            bot.replyPrivate(message, 'boopbeep')
+            break 
+            
             
           default:
             bot.replyPrivate(message, "Sorry, I'm not sure what that command is")

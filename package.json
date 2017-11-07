@@ -7,16 +7,20 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "botkit": "^0.6",
-    "botkit-storage-mongo": "^1.0.6",
+    "body-parser": "^1.18.2",
+    "botkit": "^0.6.5",
+    "botkit-storage-mongo": "^1.0.7",
     "botkit-studio-metrics": "^0.0.1",
-    "debug": "^2.3.3",
-    "express": "^4.14.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
     "node-env-file": "^0.1.8",
     "querystring": "^0.2.0",
-    "request": "^2.79.0",
-    "wordfilter": "^0.2.6"
+    "request": "^2.83.0",
+    "wordfilter": "^0.2.6",
+    "nodemon": "^1.12.1",
+    "raven": "^2.2.1",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.11"
   },
   "devDependencies": {},
   "repository": {
@@ -36,5 +40,8 @@
   "license": "ISC",
   "directories": {
     "doc": "docs"
+  },
+  "engines": {
+    "node": "8.9.0"
   }
 }
