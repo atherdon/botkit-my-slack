@@ -79,7 +79,78 @@ module.exports = function(controller) {
 
     });
 
-
+    controller.hears(['repos'], 'direct_message', (bot, message) => {
+      
+        let list = [
+          'botkit-my-slack',
+          'groceristar',
+          'cutstream-api',
+          'stripe-recurring-membership'
+        ];
+      console.log(list)
+        let attachments = [
+        { 
+          title: 'Ad1', 
+          color: '#2FA44F',
+          //text: "`/bugbot add Your Issue Title` submit a new issue \n`/bugbot issues` show your open issues",
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad2', 
+          color: '#E3E4E6',
+          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad3', 
+          color: '#E3E4E6',
+          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad24', 
+          color: '#E3E4E6',
+          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
+          mrkdwn_in: ['text']
+        }
+      ];
+      
+      attachments.forEach(function(element, index) {
+          
+          attachments[index].text = 'https://github.com/atherdon/' + list[index] + '/';
+      });
+        console.log(attachments);
+      let text = `I'm here to help!\n`
+      bot.reply(message, { text, attachments });
+      
+      
+      
+    });
+  
+  
+  
+  controller.on('slash_command', function (bot, message) {
+    
+    controller.storage.users.get(message.user, function(err, user) {
+      
+        switch (message.command) {
+          case '/repos':
+            bot.replyPrivate(message, 'boopbeep')
+            break
+            
+          default:
+            bot.replyPrivate(message, "Sorry, I'm not sure what that command is")
+            
+        }
+      
+      
+       //console.log("slash_command callback fired -- SUCCESS");
+       //bot.reply(message, "received `" + message.command + " " + message.text + "`");  
+      
+    });
+    
+    
+});
    
     // simple function to generate the text of the task list so that
     // it can be used in various places
