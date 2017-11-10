@@ -50,6 +50,14 @@ module.exports = function(controller) {
               "/bugbot xxx` ... add issue with repo search" + 
               "/bugbot xxx` ... fetch repos?",
         mrkdwn_in: ['text']
+      },
+      { 
+        title: 'Settings (Direct messages)', 
+        color: '#E3E4E6',
+        text: "`/bugbot settings` ... settings management \n` " + 
+              "/bugbot account` ... settings management \n`", 
+             
+        mrkdwn_in: ['text']
       }
     ];
   
