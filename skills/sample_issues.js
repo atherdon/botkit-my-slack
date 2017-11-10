@@ -81,11 +81,16 @@ module.exports = function(controller) {
 
     controller.hears(['repos'], 'direct_message', (bot, message) => {
       
-        let list = [
-          'botkit-my-slack',
-          'groceristar',
-          'cutstream-api',
-          'stripe-recurring-membership'
+        // At this place we'll call github and create an array with list of repositories
+      
+      
+        
+      
+      let list = [
+          {title: 'Bot', url: 'botkit-my-slack'},
+          {title: 'GS', url: 'groceristar'},
+          {title: 'CutStream', url: 'cutstream-api'},
+          {title: 'Stripe Recurring membership', url: 'stripe-recurring-membership'}
         ];
       
       console.log(list)
@@ -93,32 +98,29 @@ module.exports = function(controller) {
         { 
           title: 'Ad1', 
           color: '#2FA44F',
-          //text: "`/bugbot add Your Issue Title` submit a new issue \n`/bugbot issues` show your open issues",
           mrkdwn_in: ['text']
         },
         { 
           title: 'ad2', 
           color: '#E3E4E6',
-          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
           mrkdwn_in: ['text']
         },
         { 
           title: 'ad3', 
-          color: '#E3E4E6',
-          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
+          color: '#E3E4E6',    
           mrkdwn_in: ['text']
         },
         { 
           title: 'ad24', 
-          color: '#E3E4E6',
-          //text: "`/bugbot repo` ... display your current repo \n`/bugbot repo org/reponame` ... change your repo \n`/bugbot repos` ... list your repos \n`/bugbot whoami` ... display your Github user \n`/bugbot help` ... you're lookin' at it! \n`/bugbot logout` ... revoke Bugbot's access to your Github",
+          color: '#E3E4E6',          
           mrkdwn_in: ['text']
         }
       ];
       
       attachments.forEach(function(element, index) {
           
-          attachments[index].text = 'https://github.com/atherdon/' + list[index] + '/';
+          attachments[index].text  = 'https://github.com/atherdon/' + list[index].url + '/';
+          attachments[index].title = list[index].title;
       });
         console.log(attachments);
       let text = `I'm here to help!\n`
