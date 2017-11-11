@@ -41,10 +41,10 @@ module.exports = function(controller) {
               {type:'Add description', value: false},
               {type:'Upload screenshots', value: false},
               {type:'Add bug label by default?', value: false},
-              {type:'Do you want to have copy: added with EARWIG help', value: false}
+              {type:'Do you want to have copy: `added with EARWIG help`', value: false}
             ];
           
-            // user object can contain arbitary keys. we will store tasks in .tasks
+            // user object can contain arbitary keys. we will store settings in .settings
             if (!user || !user.settings || user.settings.length == 0) {
               
                 // bot.reply(message, 'There are no settings on your list. Say `set _setting_` to add setting.');
@@ -175,25 +175,14 @@ module.exports = function(controller) {
     function generateSettingsList(user) {
    
         var text = '';
-        // console.log(user);
-      // console.log( 
-        _.map(user.settings, function(val){ 
-          // console.log(val) 
+       
+        _.map(user.settings, function(val, key,){ 
           
-          text = text + '> `' +  (t + 1) + '`) ' +  val.type + ' : ' + val.value + '\n';  
+          text += '> `' +  (key + 1) + '`) ' +  val.type + ' : ' + val.value + '\n';  
           
         });
-      // _.each(user.settings, function(a){console.log('2')});
-      // ) ;
-        // _.map(user.settings, (value) => {
-        //   console.log('i', value);
-        // }); 
-      // console.log('dick');
       
-        // for (var t = 0; t < user.settings.length; t++) {
-        //     console.log(user.settings[t]);
-        //     text = text + '> `' +  (t + 1) + '`) ' +  user.settings[t] + '\n';
-        // }
+      
 
         return text;
 
