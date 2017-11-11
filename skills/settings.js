@@ -18,55 +18,79 @@
 
 */
 
-module.exports = function(controller) {
 
+module.exports = function(controller) {
+    const _ = require('underscore');
     // listen for someone saying 'tasks' to the bot
     // reply with a list of current tasks loaded from the storage system
     // based on this user's id
-    controller.hears(['settings','account'], 'direct_message', function(bot, message) {
+    controller.hears(['settings','account', 'se'], 'direct_message', function(bot, message) {
 
         // load user from storage...
         controller.storage.users.get(message.user, function(err, user) {
 
-            bot.reply(message, 'settings and account');
+            // bot.reply(message, 'settings and account');
           
-            let settings = {
-              'Github connected': false,
-              'Default repo': false,
-              'Aliases enabled': false,
-              'Repos':false,
-              'Assign assignee by default':false,
-              'Assign to you by default':false,
-              'Add description':false,
-              'Upload screenshots':false,
-              'Add bug label by default?':false,
-              'Do you want to have copy: added with EARWIG help':false
-            };
+            let settings = [
+              {type:'Github connected', value: false},
+              {type:'Default repo', value: false},
+              {type:'Aliases enabled', value: false},
+              {type:'Repos', value: false},
+              {type:'Assign assignee by default', value: false},
+              {type:'Assign to you by default', value: false},
+              {type:'Add description', value: false},
+              {type:'Upload screenshots', value: false},
+              {type:'Add bug label by default?', value: false},
+              {type:'Do you want to have copy: added with EARWIG help', value: false}
+            ];
           
             // user object can contain arbitary keys. we will store tasks in .tasks
             if (!user || !user.settings || user.settings.length == 0) {
-                bot.reply(message, 'There are no settings on your list. Say `set _setting_` to add setting.');
+              
+                // bot.reply(message, 'There are no settings on your list. Say `set _setting_` to add setting.');
                 
                 // this will be a duplicate of functionality from set function
               // :todo change it later
+              
+              // console.log(settings);
+              
               if (!user) {
                   user = {};
                   user.id = message.user;
                   user.settings = settings;
               }
-  
+              user.settings = settings;
+              // console.log(user);
+              // :todo duplicates
+               var text = 'Here are your current settings list: \n' +
+                    generateSettingsList(user);
+              
+              bot.reply(message, text);
               // user.settings.push(newtask);
               
               
             } else {
 
-//                 var text = 'Here are your current tasks: \n' +
-//                     generateSettingsList(user) +
-//                     'Reply with `done _number_` to mark a task completed.';
+              // if (!user) {
+              //     user = {};
+              //     user.id = message.user;
+                  // user.settings = settings;
+              // }
+              console.log(user);
+              // :todo duplicates
+               // var text = 'Here are your current settings list: \n' +
+                    // generateSettingsList(user);
+              
+              // bot.reply(message, text);
+              // console.log(user);
+//                 var text = 'Here are your current settings list: \n' +
+//                     generateSettingsList(user);
+//               // +
+//               //       'Reply with `done _number_` to mark a task completed.';
 
 //                 bot.reply(message, text);
 
-              console.log(message.user.settings)
+              // console.log(message.user.settings)
               
             }
 
@@ -149,14 +173,29 @@ module.exports = function(controller) {
     // simple function to generate the text of the settings list so that
     // it can be used in various places
     function generateSettingsList(user) {
+   
+        var text = '';
+        // console.log(user);
+      // console.log( 
+        _.map(user.settings, function(val){ 
+          // console.log(val) 
+          
+          text = text + '> `' +  (t + 1) + '`) ' +  val.type + ' : ' + val.value + '\n';  
+          
+        });
+      // _.each(user.settings, function(a){console.log('2')});
+      // ) ;
+        // _.map(user.settings, (value) => {
+        //   console.log('i', value);
+        // }); 
+      // console.log('dick');
+      
+        // for (var t = 0; t < user.settings.length; t++) {
+        //     console.log(user.settings[t]);
+        //     text = text + '> `' +  (t + 1) + '`) ' +  user.settings[t] + '\n';
+        // }
 
-//         var text = '';
-
-//         for (var t = 0; t < user.tasks.length; t++) {
-//             text = text + '> `' +  (t + 1) + '`) ' +  user.tasks[t] + '\n';
-//         }
-
-//         return text;
+        return text;
 
     }
 }
