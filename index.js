@@ -29,6 +29,22 @@ var GITHUB_CLIENT_SECRET = "de688fee8edd8f63f448094d459de1192b04f8da";
 // ));
 
 
+// Passport session setup.
+//   To support persistent login sessions, Passport needs to be able to
+//   serialize users into and deserialize users out of the session.  Typically,
+//   this will be as simple as storing the user ID when serializing, and finding
+//   the user by ID when deserializing.  However, since this example does not
+//   have a database of user records, the complete GitHub profile is serialized
+//   and deserialized.
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
+
+
 passport.use(new GitHubStrategy({
     clientID: GITHUB_CLIENT_ID,
     clientSecret: GITHUB_CLIENT_SECRET,
@@ -49,12 +65,48 @@ passport.use(new GitHubStrategy({
 ));
 
 
-app.get('/auth/github',
-  passport.authenticate('github', { scope: [ 'user:email' ] }));
+
+
+
+
+var app = express();
+
+// configure Express
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+app.use(partials());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(methodOverride());
+app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+// Initialize Passport!  Also use passport.session() middleware, to support
+// persistent login sessions (recommended).
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(express.static(__dirname + '/public'));
+
+
+app.get('/', function(req, res){
+  res.render('index', { user: req.user });
+});
+
+// app.get('/account', ensureAuthenticated, function(req, res){
+//   res.render('account', { user: req.user });
+// });
+
+// app.get('/login', function(req, res){
+//   res.render('login', { user: req.user });
+// });
+
+
+
+
+// app.get('/auth/github',
+//   passport.authenticate('github', { scope: [ 'user:email' ] }));
  
-app.get('/auth/github/callback', 
-  passport.authenticate('github', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
+// app.get('/auth/github/callback', 
+//   passport.authenticate('github', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect('/');
+//   });
