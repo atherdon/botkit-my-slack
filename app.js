@@ -21,6 +21,11 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(obj, done) {
+
+
+	//at this place we'll save to db and get user from it.
+
+	console.log(obj);
   done(null, obj);
 });
 
@@ -38,8 +43,13 @@ passport.use(new GitHubStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the GitHub account with a user record in your database,
       // and return that user instead.
-      console.log(profile);
+      // console.log(profile);
+      // console.log(accessToken);
+      // console.log(refreshToken);
+      profile.pidor = accessToken
       return done(null, profile);
+      // return done(null, {p:profile, t: accessToken});
+
     });
   }
 ));

@@ -10,4 +10,5 @@ block content
   if !user
     h2 login please
   else
-    h2= 'hi dickhead' + user.displayName	
+    h2= 'hi dickhead, ' + user.displayName	
+    a(href="/account") Account
