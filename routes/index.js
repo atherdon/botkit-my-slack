@@ -18,22 +18,22 @@ router.get('/account', ensureAuthenticated, function(req, res){
 
 
 	console.log(req.user.pidor)
-	console.log(github.describe)
+	console.log(github.default)
   let token = req.user.pidor;
   let text = "Here's a list of the Github repos I can use:\n" 
   let color = '#E3E4E6'
   let mrkdwn_in = ['text']
 
-github.user(req.user.pidor, (err, usr)=> {
-    // if (err) {
-    //   t.fail(err, err)
-    // }
-    // else {
-    //   t.ok(usr, 'got the user')
-      console.log(usr)
-    // }
-    // t.end()
-  })
+// github.default.user(req.user.pidor, (err, usr)=> {
+//     // if (err) {
+//     //   t.fail(err, err)
+//     // }
+//     // else {
+//     //   t.ok(usr, 'got the user')
+//       console.log(usr)
+//     // }
+//     // t.end()
+//   })
 
   // // get the repos
 
@@ -43,8 +43,8 @@ github.user(req.user.pidor, (err, usr)=> {
 
   // });
 
-  // github.repos(token, (err, repos) => {
-  	// console.log(repos);
+  github.default.repos(token, (err, repos) => {
+  	console.log(repos);
   //   // add the repos
   //   // repos.forEach(r=> {
   //   //   /*
@@ -58,7 +58,7 @@ github.user(req.user.pidor, (err, usr)=> {
   //   // message({attachments:[
   //   //   {text, color, mrkdwn_in}
   //   // ]})
-  // });
+  });
 
 
 
