@@ -18,6 +18,10 @@
   "homepage": "https://github.com/atherdon/botkit-my-slack#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "method-override": "^2.3.10",
     "passport": "^0.4.0",
     "passport-github2": "^0.1.11"
   }

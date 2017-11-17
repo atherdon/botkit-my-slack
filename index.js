@@ -1,12 +1,20 @@
-index.js
+var express        = require('express');
+var passport       = require('passport');
+var util           = require('util');
+var session        = require('express-session');
+var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
+var GitHubStrategy = require('passport-github2').Strategy;
+var partials       = require('express-partials');
 
 
-/giti
+// die();
+// /giti
 
 var GITHUB_CLIENT_ID     = "b0e873d261fc63c797c9";
 var GITHUB_CLIENT_SECRET = "de688fee8edd8f63f448094d459de1192b04f8da";
 
-var GitHubStrategy = require('passport-github').Strategy;
+// var GitHubStrategy = require('passport-github2').Strategy;
 
 // passport.use(new GitHubStrategy({
 //     clientID: GITHUB_CLIENT_ID,
