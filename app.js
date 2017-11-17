@@ -25,7 +25,7 @@ passport.deserializeUser(function(obj, done) {
 
 	//at this place we'll save to db and get user from it.
 
-	console.log(obj);
+	// console.log(obj);
   done(null, obj);
 });
 

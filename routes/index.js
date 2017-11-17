@@ -2,10 +2,13 @@
 
 var express = require('express');
 var passport = require('passport');
+var github = require('bugbot-github-issues');
+
 // var ensureAuthenticated = 
+
 var router = express.Router();
 
-var github = require('bugbot-github-issues');
+
 
 // console.log(github)
 
@@ -14,16 +17,34 @@ var github = require('bugbot-github-issues');
 router.get('/account', ensureAuthenticated, function(req, res){
 
 
-	// console.log(req)
-	
-  // let token = payload.account.github_token
-  // let text = "Here's a list of the Github repos I can use:\n" 
-  // let color = '#E3E4E6'
-  // let mrkdwn_in = ['text']
+	console.log(req.user.pidor)
+	console.log(github.describe)
+  let token = req.user.pidor;
+  let text = "Here's a list of the Github repos I can use:\n" 
+  let color = '#E3E4E6'
+  let mrkdwn_in = ['text']
+
+github.user(req.user.pidor, (err, usr)=> {
+    // if (err) {
+    //   t.fail(err, err)
+    // }
+    // else {
+    //   t.ok(usr, 'got the user')
+      console.log(usr)
+    // }
+    // t.end()
+  })
 
   // // get the repos
+
+  // console.log();
+
+  // var a = github.repos(token, function(e,d){
+
+  // });
+
   // github.repos(token, (err, repos) => {
-  // 	console.log(repos);
+  	// console.log(repos);
   //   // add the repos
   //   // repos.forEach(r=> {
   //   //   /*
