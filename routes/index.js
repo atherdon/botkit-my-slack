@@ -3,6 +3,7 @@
 var express = require('express');
 var passport = require('passport');
 var github = require('bugbot-github-issues');
+var _ = require('underscore');
 
 // var ensureAuthenticated = 
 
@@ -45,15 +46,21 @@ router.get('/account', ensureAuthenticated, function(req, res){
 
   github.default.repos(token, (err, repos) => {
   	console.log(repos);
+  	// console.log(err);
   //   // add the repos
-  //   // repos.forEach(r=> {
-  //   //   /*
-  //   //   text += ` • <https://github.com/${r}|${r}>\n`
-  //   //   */
-  //   //   text += ` • ${r}\n`
-  //   // })
-  //   // text += '\nTo change to another repo just run this command:\n'
-  //   // text += '`/bugbot repo org/reponame`\n'
+
+  	console.log(_.uniq(repos));
+
+    repos.forEach(r => {
+      
+      text += ` • <https://github.com/${r}|${r}>\n`
+      
+      text += ` • ${r}\n`
+    })
+    text += '\nTo change to another repo just run this command:\n'
+    text += '`/bugbot repo org/reponame`\n'
+    
+    console.log(text);
   //   // // send the reponse msg
   //   // message({attachments:[
   //   //   {text, color, mrkdwn_in}
