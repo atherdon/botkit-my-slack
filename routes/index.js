@@ -45,7 +45,29 @@ let single_repo
 
 	github.default.issues(token, single_repo, (err, issues) => {
 
-		console.log(issues)
+		// console.log(issues)
+
+
+		  let txt = {
+		    // title: 'So who the faggot now?',
+		    // body: 'This is Ma description, bitch or PIDOR',
+
+		    "title": "Found a bug",
+			  "body": "I'm having a problem with this.",
+			  // "assignees": [
+			  //   "atherdon"
+			  // ],
+			  // "milestone": 1,
+			  "labels": [
+			    "bug"
+			  ],
+
+		    token: token,
+		    repoID: single_repo
+		  }
+		  github.default.add(txt, (err, issue) => {
+		  	console.log(issue);
+		  })
 
 	});
 
@@ -168,6 +190,15 @@ router.get('/auth/github',
 router.get('/auth/github/callback', 
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
+router.get('/github/receive', 
+  
+  function(req, res) {
+
+  	
     // Successful authentication, redirect home.
     res.redirect('/');
   });
