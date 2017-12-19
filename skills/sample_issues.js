@@ -18,8 +18,77 @@
 
 */
 
+
+
+
+
+// Login
+// Get Auth by passportjs
+// callback
+// Search repos
+// set repos
+// get repo
+// get or add an issue
+// add title
+// add description
+
+
 module.exports = function(controller) {
 
+      // So this is the starting point in our conversation
+      controller.hears(['repos'], 'direct_message', (bot, message) => {
+      
+        // At this place we'll call github and create an array with list of repositories
+      
+      
+        
+      
+      let list = [
+          {title: 'Bot', url: 'botkit-my-slack'},
+          {title: 'GS', url: 'groceristar'},
+          {title: 'CutStream', url: 'cutstream-api'},
+          {title: 'Stripe Recurring membership', url: 'stripe-recurring-membership'}
+        ];
+      
+      console.log(list)
+        let attachments = [
+        { 
+          title: 'Ad1', 
+          color: '#2FA44F',
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad2', 
+          color: '#E3E4E6',
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad3', 
+          color: '#E3E4E6',    
+          mrkdwn_in: ['text']
+        },
+        { 
+          title: 'ad24', 
+          color: '#E3E4E6',          
+          mrkdwn_in: ['text']
+        }
+      ];
+      
+      attachments.forEach(function(element, index) {
+          
+          attachments[index].text  = 'https://github.com/atherdon/' + list[index].url + '/';
+          attachments[index].title = list[index].title;
+      });
+        console.log(attachments);
+      let text = `I'm here to help!\n`
+      bot.reply(message, { text, attachments });
+      
+      
+      
+    });
+  
+  
+  
     // listen for someone saying 'tasks' to the bot
     // reply with a list of current tasks loaded from the storage system
     // based on this user's id
@@ -79,58 +148,7 @@ module.exports = function(controller) {
 
     });
 
-    controller.hears(['repos'], 'direct_message', (bot, message) => {
-      
-        // At this place we'll call github and create an array with list of repositories
-      
-      
-        
-      
-      let list = [
-          {title: 'Bot', url: 'botkit-my-slack'},
-          {title: 'GS', url: 'groceristar'},
-          {title: 'CutStream', url: 'cutstream-api'},
-          {title: 'Stripe Recurring membership', url: 'stripe-recurring-membership'}
-        ];
-      
-      console.log(list)
-        let attachments = [
-        { 
-          title: 'Ad1', 
-          color: '#2FA44F',
-          mrkdwn_in: ['text']
-        },
-        { 
-          title: 'ad2', 
-          color: '#E3E4E6',
-          mrkdwn_in: ['text']
-        },
-        { 
-          title: 'ad3', 
-          color: '#E3E4E6',    
-          mrkdwn_in: ['text']
-        },
-        { 
-          title: 'ad24', 
-          color: '#E3E4E6',          
-          mrkdwn_in: ['text']
-        }
-      ];
-      
-      attachments.forEach(function(element, index) {
-          
-          attachments[index].text  = 'https://github.com/atherdon/' + list[index].url + '/';
-          attachments[index].title = list[index].title;
-      });
-        console.log(attachments);
-      let text = `I'm here to help!\n`
-      bot.reply(message, { text, attachments });
-      
-      
-      
-    });
-  
-  
+
   
   controller.on('slash_command', function (bot, message) {
     
