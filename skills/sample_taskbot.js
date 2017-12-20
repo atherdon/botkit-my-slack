@@ -17,6 +17,16 @@
         botkit-storage-mysql
 
 */
+const _ = require('underscore');
+
+
+
+
+
+
+
+
+
 
 module.exports = function(controller) {
 
