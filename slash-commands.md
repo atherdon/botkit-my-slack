@@ -1,16 +1,16 @@
 
-Recipe Add
+## Recipe Add
 /view all
 /view one
 /view by date
 /calendar
 /preview
 
-Idea Saver
+## Idea Saver
 /add title + description, priority / monetization -> Yes/No
 /push to repo
 
-Restaurant
+## Restaurant
 /menu
 /menu by type(category)
 /item + price add to category
@@ -19,7 +19,7 @@ Restaurant
 /preview
 /list or grid view
 
-Fitness
+## Fitness
 /jogging
 /hike
 /workout
@@ -31,12 +31,12 @@ Fitness
 /steps
 Start timer while you make workout + beep notification like alarm
 
-Cookbook
+## Cookbook
 /recipe Add
 /view cookbook
 /view list of cookbooks
 
-measurements
+## Measurements
 /add
 /view by type (1 kg is)
 /convertation
@@ -46,7 +46,7 @@ measurements
 save settings like imperial or metric
 save cups, spoons, metric - related to data that we have on github
 
-family budget
+## Family budget
 вначале просмотреть информацию из Excel
 реализовать 5-10 математических формул в js
 /add purchase
@@ -54,7 +54,7 @@ family budget
 /view by type
 /calculate something
 
-Expences
+## Expenses
 /add
 /view
 /delete
@@ -71,7 +71,7 @@ Expences
 /calculate by date, by month
 
 
-Dietary
+## Dietary
 dig more into this topic first
 /calendar + add + view
 /create and manage Diet
@@ -79,7 +79,7 @@ dig more into this topic first
 /ingredients
 /steps or description(like a excercises)
 
-shopping
+## Shopping
 /directions
 /view item list in directions
 /groceries list
@@ -89,7 +89,7 @@ shopping
 /add, delete, purchase ingredient/items
 share lists between users.
 
-Video
+## Video
 /view by name or numbers
 /view all
 /add completed
