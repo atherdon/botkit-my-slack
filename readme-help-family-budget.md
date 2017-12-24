@@ -1,7 +1,7 @@
 
 **What can it do?**
 
-Description about what your bot doing.
+Track you family spendings. Similar but not completly the same as expenses. Cause usign different formulas and methods. This bot is more simple.
 
 It also future some admin commands like "setvolume", "next", "stop" etc.
 
