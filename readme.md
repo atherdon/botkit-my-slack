@@ -126,26 +126,27 @@ Botkit is a product of [Howdy](https://howdy.ai) and made in Austin, TX with the
 
 **What can it do?**
 
-It will queue you requests and play it..  However if X amount of people for any strange reason doesn't like the current track, it will listen to the command "**gong**" and eventually skip to the next track.
+it's a clone of bugbot
 
-It also future some admin commands like "setvolume", "next", "stop" etc.
+
 
 List of commands (just type help in the channel)
 
 * `help` : this list
-* `current` : list current track
-* `search` _text_ : search for a track, does NOT add it to the queue
-* `add` _text_ : Add song to the queue and start playing if idle.
-* `append` _text_ : Append a song to the previous playlist and start playing the same list again.
-* `gong` : The current track is bad! Vote for skipping this track
-* `gongcheck` : How many gong votes there are currently, as well as who has GONGED.
-* `vote` _exactSongTitle_ : Vote for a specific song title in the queue.
-* `volume` : view current volume
-* `list` : list current queue
-* `status` : show the current status
+* `add` : add an issue
+* `auth` : login
+* `issues` : list of all issues
+* `logout` : logout from all
+* `repo` pick : pick a repository to work with
+* `repos` : list of all repositories
+* `alias` : list of all repositories
+* `search` : list of all repositories
+
+
 
 **ADMIN FUNCTIONS**
 
+not at this moment
 * `flush` : flush the current queue
 * `setvolume` _number_ : sets volume
 * `play` : play track
