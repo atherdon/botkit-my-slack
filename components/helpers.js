@@ -237,6 +237,15 @@ cheakYesNo = (match) => {
 getUser = (response) => {
   return "@#{response.message.user.name}";
 };
+
+// function inviteMessage(inviter, channel) {
+function inviteMessage(inviter) {
+
+  let welcomeText = `Thanks for inviting me, ${inviter.name}! Good to be here :)\n`;
+  bot.reply(message, welcomeText);
+
+};
+
 //
 // module.exports = {
 //   parse,
