@@ -20,7 +20,11 @@
 const _ = require('underscore');
 
 
+let dialogos = require('/dialogs/sample-dialog');
+console.log(dialogos);
 
+// let replies =  require('/dialogs/sample-dialog');
+// console.log(dialogos);
 
 
 //we're assuming that bot, message are in scope of this functions.
@@ -29,13 +33,14 @@ viewTasks = (err, user) => {
 
   // user object can contain arbitary keys. we will store tasks in .tasks
   if (!user || !user.tasks || user.tasks.length == 0) {
+    // replies[0]
     bot.reply(message, 'There are no tasks on your list. Say `add _task_` to add something.');
     next();
   };
 
 
   // else {
-
+    // replies[0]
     var text = 'Here are your current tasks: \n' +
         generateTaskList(user) +
         'Reply with `done _number_` to mark a task completed.';
@@ -65,6 +70,7 @@ completeTask = function(err, user){
   }
 
   if (number < 0 || number >= user.tasks.length) {
+      // replies[0]
       bot.reply(message, 'Sorry, your input is out of range. Right now there are ' + user.tasks.length + ' items on your list.');
   } else {
 
@@ -74,8 +80,10 @@ completeTask = function(err, user){
       bot.reply(message, '~' + item + '~');
 
       if (user.tasks.length > 0) {
+          // replies[0]
           bot.reply(message, 'Here are our remaining tasks:\n' + generateTaskList(user));
       } else {
+          // replies[0]
           bot.reply(message, 'Your list is now empty!');
       }
   }
@@ -83,6 +91,7 @@ completeTask = function(err, user){
 
 saveTask = (err, saved) => {
   if (err) {
+      // replies[0]
       bot.reply(message, 'I experienced an error adding your task: ' + err);
       next();
   } else {
@@ -201,6 +210,22 @@ module.exports = function(controller) {
             });
         }
 
+    });
+
+
+    // listen for a user saying "setting _name_", and then we display setting with such name
+    controller.hears(['sett (.*)'], 'direct_message', function(bot, message){
+
+      var setting_key = message.match[1];
+
+      // here we're checking if user isset and if it have setting with name
+      controller.storage.users.get(message.user, function(err, user) {
+         if (user && user.setting_key) {
+             bot.reply(message,'Your setting, ' + setting_key + ' = ' + user.setting_key);
+         } else {
+             bot.reply(message,'I don\'t know yet!');
+         }
+     });
     });
 
     // simple function to generate the text of the task list so that

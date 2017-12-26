@@ -156,6 +156,87 @@ function parse (config) {
         return params;
     }
 
+// ma functions - did you see it easily?
+
+cheackIfMatchIsset = (match) => {
+  // var shuffling = true;
+
+  if(message.match && message.match[1]) {
+    return true
+      // if(message.match[1] === 'on') {
+      //     shuffling = true;
+      // }
+      // else if(message.match[1] === 'off') {
+      //     shuffling = false;
+      // }
+      // else {
+      //     return;
+      // }
+  }
+  return false;
+};
+
+cheackIfMatchIsset2 = (match, cb) => {
+  // var shuffling = true;
+
+  if(message.match && message.match[1]) {
+      cb(true);
+    // return true
+      // if(message.match[1] === 'on') {
+      //     shuffling = true;
+      // }
+      // else if(message.match[1] === 'off') {
+      //     shuffling = false;
+      // }
+      // else {
+      //     return;
+      // }
+  }
+  cb(false); // @todo or error
+  // return false;
+};
+
+cheakYesNo = (match) => {
+
+  switch (match[1]){
+    case 'yes':
+      return true;
+    break;
+
+    case 'no':
+      return false;
+    break;
+
+    default:
+      return;
+    break;
+  }
+
+
+};
+
+cheakYesNo = (match) => {
+
+  switch (match[1]){
+    case 'on':
+      return true;
+    break;
+
+    case 'off':
+      return false;
+    break;
+
+    default:
+      return;
+    break;
+  }
+
+
+};
+
+getUser = (response) => {
+  return "@#{response.message.user.name}";
+};
 //
 // module.exports = {
 //   parse,

@@ -10,11 +10,51 @@ var controller = Botkit.slackbot({
 });
 
 // part was not moved
+
+
+// messages. belong to threads
+// not working right now too
+// create a path for when a user says YES
+// convo.addMessage({
+//         text: 'How wonderful.',
+// },'yes_thread');
+//
+// // create a path for when a user says NO
+// // mark the conversation as unsuccessful at the end
+// convo.addMessage({
+//     text: 'Cheese! It is not for everyone.',
+//     action: 'stop', // this marks the converation as unsuccessful
+// },'no_thread');
+//
+// // create a path where neither option was matched
+// // this message has an action field, which directs botkit to go back to the `default` thread after sending this message.
+// convo.addMessage({
+//     text: 'Sorry I did not understand. Say `yes` or `no`',
+//     action: 'default',
+// },'bad_response');
+
 // like yes, no, erro branches
 // not working at this moment, due to passing additional data into array
-let threads = [
-
-];
+// let threads = [
+//   {
+//       pattern:  bot.utterances.yes,
+//       callback: function(response, convo) {
+//           convo.gotoThread('yes_thread');
+//       },
+//   },
+//   {
+//       pattern:  bot.utterances.no,
+//       callback: function(response, convo) {
+//           convo.gotoThread('no_thread');
+//       },
+//   },
+//   {
+//       default: true,
+//       callback: function(response, convo) {
+//           convo.gotoThread('bad_response');
+//       },
+//   }
+// ];
 
 // part added for make some adjustments
 
@@ -28,7 +68,7 @@ functionA = (response, convo) => {
   });
 };
 
-functionD = (response, convo) => {
+functionB = (response, convo) => {
   convo.ask("What want what?", function(response, convo) {
     convo.say("Awesome.");
     functionC(response, convo);
@@ -63,7 +103,8 @@ functionEnd = (convo) => {
 
 
 modules.export = {
-  fucntiona,
-  functionab,
-  functionac
-}
+  functionA,
+  functionB,
+  functionC,
+  functionEnd
+};
