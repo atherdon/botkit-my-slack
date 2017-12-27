@@ -1,7 +1,54 @@
-let help_bugbot = '';
+let help_bugbot = 'You can say these things to me:\n'+
+    '\t⦿ *next* – _Fed up with the track? Skip it._\n'+
+    '\t⦿ *previous* – _Want to hear that again? Just ask._\n'+
+    '\t⦿ *start again* / *over* – _Missed the beginning of the track? No problem._\n'+
+    '\t⦿ *volume up* / *down* – _increases / decreases the volume_\n'+
+    '\t⦿ *set volume* [1-100] – _sets the volume_\n'+
+    '\t⦿ *status* – _I will tell information about the Spotify player_\n'+
+    '\t⦿ *info* – _I will tell you about this track_\n'+
+    '\t⦿ *detail* – _I will tell you more about this track_\n'+
+    '\t⦿ *play* / *pause* – _plays or pauses the music_\n'+
+    '\t⦿ *play track* [track name], *play track* [track name] - [artist] – _plays a specific track_\n'+
+    '\t⦿ *play track* [track name] | [album] – _plays a specific track in the context of an album. You can add_ - [artist] _to either the track or the album to be more specific_\n'+
+    '\t⦿ *play album* [album name], play album [album name] - artist – _plays a specific album_';
+
+let array = [
+      'You can say these things to me:',
+      '\t⦿ *next* – _Fed up with the track? Skip it._',
+      '\t⦿ *previous* – _Want to hear that again? Just ask._',
+      '\t⦿ *start again* / *over* – _Missed the beginning of the track? No problem._',
+      '\t⦿ *volume up* / *down* – _increases / decreases the volume_',
+      '\t⦿ *set volume* [1-100] – _sets the volume_',
+      '\t⦿ *status* – _I will tell information about the Spotify player_',
+      '\t⦿ *info* – _I will tell you about this track_',
+      '\t⦿ *detail* – _I will tell you more about this track_',
+      '\t⦿ *play* / *pause* – _plays or pauses the music_',
+      '\t⦿ *play track* [track name], *play track* [track name] - [artist] – _plays a specific track_',
+      '\t⦿ *play track* [track name] | [album] – _plays a specific track in the context of an album. You can add_ - [artist] _to either the track or the album to be more specific_',
+      '\t⦿ *play album* [album name], play album [album name] - artist – _plays a specific album_'
+];
 
 
 module.exports = function(controller) {
+
+
+//   controller.hears(['^help$'],'direct_message,direct_mention,mention', function(bot, message) {
+//     bot.reply(message,'You can say these things to me:\n'+
+//         '\t⦿ *next* – _Fed up with the track? Skip it._\n'+
+//         '\t⦿ *previous* – _Want to hear that again? Just ask._\n'+
+//         '\t⦿ *start again* / *over* – _Missed the beginning of the track? No problem._\n'+
+//         '\t⦿ *volume up* / *down* – _increases / decreases the volume_\n'+
+//         '\t⦿ *set volume* [1-100] – _sets the volume_\n'+
+//         '\t⦿ *status* – _I will tell information about the Spotify player_\n'+
+//         '\t⦿ *info* – _I will tell you about this track_\n'+
+//         '\t⦿ *detail* – _I will tell you more about this track_\n'+
+//         '\t⦿ *play* / *pause* – _plays or pauses the music_\n'+
+//         '\t⦿ *play track* [track name], *play track* [track name] - [artist] – _plays a specific track_\n'+
+//         '\t⦿ *play track* [track name] | [album] – _plays a specific track in the context of an album. You can add_ - [artist] _to either the track or the album to be more specific_\n'+
+//         '\t⦿ *play album* [album name], play album [album name] - artist – _plays a specific album_'
+//         // 'play playlist [playlist name] – plays a specific playlist\n'+
+//     );
+// });
 
 
     // This before middleware allows the help command to accept sub-thread names as a parameter

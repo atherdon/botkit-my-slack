@@ -274,7 +274,15 @@ exports.resultsCard = (card) => {
 	return `[${card.name}](http://www.trello.com/c/${card.id}) in *${card.list.name}*`
 }
 
+// @todo add raven exception logger
+// @todo check
+failedToAddReaction = (err,res) => {
 
+    if (err) {
+        bot.botkit.log("Failed to add emoji reaction :(",err);
+    }
+
+};
 //
 // module.exports = {
 //   parse,
