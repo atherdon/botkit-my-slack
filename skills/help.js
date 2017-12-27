@@ -1,16 +1,150 @@
-let help_bugbot = 'You can say these things to me:\n'+
-    '\t⦿ *next* – _Fed up with the track? Skip it._\n'+
-    '\t⦿ *previous* – _Want to hear that again? Just ask._\n'+
-    '\t⦿ *start again* / *over* – _Missed the beginning of the track? No problem._\n'+
-    '\t⦿ *volume up* / *down* – _increases / decreases the volume_\n'+
-    '\t⦿ *set volume* [1-100] – _sets the volume_\n'+
-    '\t⦿ *status* – _I will tell information about the Spotify player_\n'+
-    '\t⦿ *info* – _I will tell you about this track_\n'+
-    '\t⦿ *detail* – _I will tell you more about this track_\n'+
-    '\t⦿ *play* / *pause* – _plays or pauses the music_\n'+
-    '\t⦿ *play track* [track name], *play track* [track name] - [artist] – _plays a specific track_\n'+
-    '\t⦿ *play track* [track name] | [album] – _plays a specific track in the context of an album. You can add_ - [artist] _to either the track or the album to be more specific_\n'+
-    '\t⦿ *play album* [album name], play album [album name] - artist – _plays a specific album_';
+
+
+let help_bugbot = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+
+let help_cookbook = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_dietary = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_expenses = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_family_budget = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_fitness = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_idea = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_measurements = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_recipe_add = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_restaurant_menu = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_shopping_list = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
+let help_video = 'You can say these things to me(just type help in the channel):\n'+
+    '\tList of commands\n'+
+    '\t⦿ `help` : this list\n'+
+    '\t⦿ * `add` : add an issue\n'+
+    '\t⦿ * `auth` : login\n'+
+    '\t⦿ * `issues` : list of all issues\n'+
+    '\t⦿ `logout` : logout from all\n'+
+    '\t⦿ `repo` pick : pick a repository to work with\n'+
+    '\t⦿ `repos` : list of all repositories\n'+
+    '\t⦿ `alias` : list of all repositories\n'+
+    '\t⦿ `search` : list of all repositories\n'
+    ;
 
 let array = [
       'You can say these things to me:',
