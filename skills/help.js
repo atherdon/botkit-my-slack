@@ -13,6 +13,10 @@ let help_bugbot = 'You can say these things to me(just type help in the channel)
     '\t⦿ `search` : list of all repositories\n'
     ;
 
+    * `help` : this list
+    * `recipe` add: add a new recipe into your cookbook
+    * `view` _cookbookName_ : search for a cookbook, display data in a proper way
+
 let help_cookbook = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -25,6 +29,18 @@ let help_cookbook = 'You can say these things to me(just type help in the channe
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `calendar` : manage your diet calendar
+    * `calendar` _add_ : add new item
+    * `calendar` _view_ : view diet calendar - current week only
+    * `create` _dietName_ : create a new diet
+    * `manage` _dietName_ : manage your diet
+    * `calories` : list of your eaten calories
+    * `calories` _add_ : add a new meal with calories
+    * `ingredients` : View list of ingredients of your diet
+    * `steps` : or description - it's like a step-by-step plan what you must to do or what goal you must an accomplish
+
 let help_dietary = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -37,6 +53,24 @@ let help_dietary = 'You can say these things to me(just type help in the channel
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `add` : add a new purchased item
+    * `view` _name_ : view details about purchased item
+    * `view` list : view list of purchased items
+    * `delete` _nameOrNumber_ : Delete item from the list
+    * `ingredients`: Display list of purchsed ingredients Can be converted later to /items
+    * `beer` : Track how much beer did you buy
+    * `apartment` : Add your monthly apartment costs
+    * `wifi`  : Add your monthly internet costs
+    * `glowing` : add how much you spend on this month on electricity
+    * `calendar` : Calendar view with your must-to-purhase or pay stuff
+    * `grid` : display stuff in a grid view
+    * `view` _date_: view by date
+    * `add` prices: just track prices via comma
+    * `add` price: [name, sum, date] format - add single purchased item
+    * `calculate` _dateOrMonth_: How much did you spend on date or by month
+
 let help_expenses = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -49,6 +83,13 @@ let help_expenses = 'You can say these things to me(just type help in the channe
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `add` _purchase_: add a new item into list
+    * `view` : view all purchases
+    * `view` _type_ : view purchases by type
+    * `calculate`: Calculate something
+
 let help_family_budget = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -61,6 +102,19 @@ let help_family_budget = 'You can say these things to me(just type help in the c
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `jogging` _text_: add your new train
+    * `hike` _text_ : add your new train
+    * `workout` _text_ : add your new train
+    * `yoga` _text_ : add your new train
+    * `log` : what we can check with this? food log?
+    * `view` _categoryName_: display data, related to some of category
+    * `view` all: display all data, pushed in some last days. maybe week
+    * `weight` _text_: Track your weight
+    * `calories` _text_: Track your weight
+    * `steps` _text_: Track your weight
+
 let help_fitness = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -73,6 +127,11 @@ let help_fitness = 'You can say these things to me(just type help in the channel
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `add` _title_, _description_, _priority_, _monetization_ : add an idea. Monetization is yes/no question
+    * `push` _repository_ : push to repo
+
 let help_idea = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -85,6 +144,14 @@ let help_idea = 'You can say these things to me(just type help in the channel):\
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `add` : add a new measurement into database
+    * `view` _type_ : search by type and display a list or related items (1 kg is)
+    * `view` all : display all information that we have
+    * `convertation`: Convert from one into another
+    * `multiplication` _values_ :  _values__ == "1kg, 0.5kg" So we need to count how much we eat sugar per year. is 1.5k
+
 let help_measurements = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -97,6 +164,14 @@ let help_measurements = 'You can say these things to me(just type help in the ch
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `view` all : display all added recipes
+    * `view` one : display only one recipe - by name???
+    * `view` date : display by date
+    * `calendar` : calendar with what???
+    * `preview` : preview recipes, maybe? for what reason???
+
 let help_recipe_add = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -109,6 +184,16 @@ let help_recipe_add = 'You can say these things to me(just type help in the chan
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `menu` : list current track
+    * `menu` _type_ : create menu items in this category - maybe????
+    * `item` _price_, _category_ : Add item into menu with price and category.
+    * `add` _name_, _measurement_, _price_ : Add item with measurements, like "salad 350g", like "long island 300ml"
+    * `preview` : check how it looks
+    * `list` : list view
+    * `grid` : grid view
+
 let help_restaurant_menu = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -121,6 +206,16 @@ let help_restaurant_menu = 'You can say these things to me(just type help in the
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `menu` : list current track
+    * `menu` _type_ : create menu items in this category - maybe????
+    * `item` _price_, _category_ : Add item into menu with price and category.
+    * `add` _name_, _measurement_, _price_ : Add item with measurements, like "salad 350g", like "long island 300ml"
+    * `preview` : check how it looks
+    * `list` : list view
+    * `grid` : grid view
+
 let help_shopping_list = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -133,6 +228,14 @@ let help_shopping_list = 'You can say these things to me(just type help in the c
     '\t⦿ `alias` : list of all repositories\n'+
     '\t⦿ `search` : list of all repositories\n'
     ;
+
+    * `help` : this list
+    * `view` _nameOrNumber_ : search and display video
+    * `view` all : display list with all saved videos
+    * `add` _text_ : Add video
+    * `add` completed : video marked as watched
+    * `view` _onlyNewVideos_ : see fresh first
+
 let help_video = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
