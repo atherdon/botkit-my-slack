@@ -7,7 +7,7 @@ module.exports = function(controller) {
       let inviterId = message.inviter;
       // let channelId = message.channel;
       var inviter;
-      inviteMessage(inviter);
+      inviteMessage(inviter); //will not work and generate an error
       // var channel;
 
         controller.studio
