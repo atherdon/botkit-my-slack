@@ -27,6 +27,13 @@ console.log(dialogos);
 // console.log(dialogos);
 
 
+// const {
+//   inlineCard,
+//   displayCard,
+//   resultsCard,
+// } = require('../helpers')
+
+
 //we're assuming that bot, message are in scope of this functions.
 viewTasks = (err, user) => {
   bot.reply(message, 'reply');

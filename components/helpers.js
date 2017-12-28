@@ -283,6 +283,25 @@ failedToAddReaction = (err,res) => {
     }
 
 };
+
+// @todo maybe move to someother place
+// display the results
+searchResult = (vars, message) => {
+  let response
+  if(true){
+      response = `Search results for \`{{vars.query}}\` ` +
+                `from [**${message.trello_channel.board.name}**]` +
+                `(${message.trello_channel.board.url}) on Trello:\n\n{{{vars.results}}}`;
+  } else {
+    response = `No match for \`{{vars.query}}\` ` +
+               `in [**${message.trello_channel.board.name}**]` +
+               `(${message.trello_channel.board.url}) on Trello.`,
+  }
+
+};
+
+
+
 //
 // module.exports = {
 //   parse,
