@@ -8,29 +8,29 @@ const _ = require('underscore');
 let view = [ date, ingredient_name, department_name ];
 
 // ideas
-// let view = [ title, priority, monetization ];
+let view = [ title, priority, monetization ];
 
 // cookbook
-// let view = [ recipe_title, recipe_image, order_sort ];
+let view = [ recipe_title, recipe_image, order_sort ];
 
 // restaurant
-// let view = [ menu_name, {category_name, { dishes_list }} ];
+let view = [ menu_name, {category_name, { dishes_list }} ];
 
 // dietary
-// let view = [ month, actions, department_name ];
-// let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
+let view = [ month, actions, department_name ];
+let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
 
 // Expenses
-// let view = [ month, {sum_list} ];
+let view = [ month, {sum_list} ];
 
 // video
-// let view = [ date, who_send, link_to_browser];
+let view = [ date, who_send, link_to_browser];
 
 // recipes
-// let view = [ id, title, description, steps, date ];
+let view = [ id, title, description, steps, date ];
 
 // search
-// let view = [ link, items, ULR ];
+let view = [ link, items, ULR ];
 
 // fitness
 let view  = [ date, {calories_list} ];
