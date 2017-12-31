@@ -14,7 +14,7 @@ let view = [ "title", "priority", "monetization" ];
 let view = [ "recipe_title", "recipe_image", "order_sort" ];
 
 // restaurant
-let view = [ "menu_name", { id:"category_name", { id:"dishes_list" } } ];
+let view = [ "menu_name", { [id:"category_name", value:false], { id:"dishes_list", value: false } } ];
 
 // dietary
 let view = [ "month", "actions", "department_name" ];
@@ -34,7 +34,11 @@ let view = [ "link", "items", "ULR" ];
 
 // fitness
 let view  = [ "date", {calories_list} ];
-let view2 = [ "type_name", { id:"date", id:"result", id:"calories_burn" } ];
+let view2 = [ "type_name", {
+   [id:"date", value: false],
+   [id:"result", value: false],
+   [id:"calories_burn", value: false]
+ } ];
 
 // measurement
 let view  = [ "name", "plurals" ]; //[kg, g, ml]

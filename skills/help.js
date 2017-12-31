@@ -102,11 +102,7 @@ let help_idea = 'You can say these things to me(just type help in the channel):\
     '\t⦿ `push` _repository_ : push to repo\n'
     ;
 
-    *
-    *
-    *
-    *
-    *
+
 
 let help_measurements = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
@@ -118,11 +114,6 @@ let help_measurements = 'You can say these things to me(just type help in the ch
     '\t⦿ `multiplication` _values_ :  _values__ == "1kg, 0.5kg"\n'
     ;
 
-    *
-    *
-    *
-    *
-    *
 
 let help_recipe_add = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
@@ -133,7 +124,6 @@ let help_recipe_add = 'You can say these things to me(just type help in the chan
     '\t⦿ `calendar` : calendar with what???\n'+
     '\t⦿ `preview` : preview recipes, maybe? for what reason???\n'
     ;
-
 
 
 let shopping_list = 'You can say these things to me(just type help in the channel):\n'+
