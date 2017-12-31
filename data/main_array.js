@@ -1,33 +1,43 @@
 
+// This is toSave arrays....
+
+
 const _ = require('underscore');
 
 
 
 //------------
 // Shopping
-let array
-let view = [ date, ingredient_name, department_name ];
+let array = {
+
+};
+
+let view = required('views_array')['shop'];
 [gl_id, dep_id, ingredient_name]
 "gl_id": {ingredient_name, department_name}
 
 // Ideas
 let array
 let view = [ title, priority, monetization ];
+let view = required('views_array')['shop'];
 "ideas": {id, date, title, monetization -> yes or no, priority}
 
 // Cookbook
 let array
 let view = [ recipe_title, recipe_image, order_sort ];
+let view = required('views_array')['shop'];
 "cookbook name": {recipe_id, recipe_title, recipe_image}
 
 // Restaurant
 let array
 let view = [ menu_name, {category_name, { dishes_list }} ];
+let view = required('views_array')['shop'];
 "menu": ["category_name", {dish_name, weight, price}]
 
 // Dietary
 let array
 let view = [ month, actions, department_name ];
+let view = required('views_array')['shop'];
 let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
 "calendar":
 
@@ -86,6 +96,7 @@ let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
 // Expenses
 let array
 let view = [ month, {sum_list} ];
+let view = required('views_array')['shop'];
 {
   month name: [ [sum, date],[sum, date] ]
 };
@@ -97,11 +108,13 @@ let view = [ month, {sum_list} ];
 // Video
 let array
 let view = [ date, who_send, link_to_browser];
+let view = required('views_array')['shop'];
 [id, date, url, time short, who send]
 
 
 // Recipes
 let array
+let view = required('views_array')['shop'];
 ingredients with [ingredient, calories]
 {
   recipe_id, image, title, description,
@@ -112,6 +125,7 @@ ingredients with [ingredient, calories]
 // Search
 let array
 let view = [ link, items, ULR ];
+let view = required('views_array')['shop'];
 
 {
   ingredients: [A1, B1, C1, D1]
@@ -132,6 +146,7 @@ let view = [ link, items, ULR ];
 // Fitness
 let array
 let view  = [ date, {calories_list} ];
+let view = required('views_array')['shop'];
 let view2 = [ type_name, {date, result, calories_burn} ];
 
 "jogging": [{date, how much, calories}, {date, how much, calories}]
@@ -150,5 +165,7 @@ what measurement have inside: 1 kg have 1000 grams
 "converted_to": ["gramms":"1000", "litres":"800ml"]
 
 let view  = [ name, plurals ]; //[kg, g, ml]
+let view = required('views_array')['shop'];
+
 let view2 = [ how_much_items_we_have(sum), sum_of_ingredients ]; // [3, 1,6 kg, salt]
 let view3 = [name, {list of converted sub_names}]
