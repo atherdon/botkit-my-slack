@@ -14,11 +14,11 @@ let view = [ "title", "priority", "monetization" ];
 let view = [ "recipe_title", "recipe_image", "order_sort" ];
 
 // restaurant
-let view = [ "menu_name", {category_name, { dishes_list }} ];
+let view = [ "menu_name", { id:"category_name", { id:"dishes_list" } } ];
 
 // dietary
 let view = [ "month", "actions", "department_name" ];
-let view2 = [ "calories", {cooking_list_name, {calorie, item}} ];
+let view2 = [ "calories", { id: "cooking_list_name", { id:"calorie", value:"item" } } ];
 
 // Expenses
 let view = [ "month", {sum_list} ];
@@ -34,7 +34,7 @@ let view = [ "link", "items", "ULR" ];
 
 // fitness
 let view  = [ "date", {calories_list} ];
-let view2 = [ "type_name", {date, result, calories_burn} ];
+let view2 = [ "type_name", { id:"date", id:"result", id:"calories_burn" } ];
 
 // measurement
 let view  = [ "name", "plurals" ]; //[kg, g, ml]
