@@ -8,37 +8,63 @@ const _ = require('underscore');
 
 //------------
 // Shopping
-let array = {
-
-};
+// let array = {
+//
+// };
+// let array = [
+//    "gl_id", { "ingredient_name", "department_name"}
+//  ];
+ let array = [
+    "gl_id", "ingredient_name", "department_name"
+  ];
 
 let view = required('views_array')['shop'];
-[gl_id, dep_id, ingredient_name]
-"gl_id": {ingredient_name, department_name}
+// [gl_id, dep_id, ingredient_name]
+// "gl_id": {ingredient_name, department_name}
 
 // Ideas
-let array
-let view = [ title, priority, monetization ];
+let array = [ "id", "date", "title", "monetization", "priority" ];
+// let view = [ title, priority, monetization ];
 let view = required('views_array')['shop'];
-"ideas": {id, date, title, monetization -> yes or no, priority}
+// "ideas": {id, date, title, monetization -> yes or no, priority}
 
 // Cookbook
-let array
-let view = [ recipe_title, recipe_image, order_sort ];
+let array = [
+  "cookbook name", "cookbook_id", "recipe_id", "recipe_title", "recipe_image"
+];
+// let view = [ recipe_title, recipe_image, order_sort ];
 let view = required('views_array')['shop'];
-"cookbook name": {recipe_id, recipe_title, recipe_image}
+// "cookbook name": {recipe_id, recipe_title, recipe_image}
 
 // Restaurant
-let array
-let view = [ menu_name, {category_name, { dishes_list }} ];
+let array = [
+  "menu_id","category_id", "category_name", "dish_name", "weight", "price", "notes"
+];
+// let view = [ menu_name, {category_name, { dishes_list }} ];
 let view = required('views_array')['shop'];
-"menu": ["category_name", {dish_name, weight, price}]
+// "menu": ["category_name", {dish_name, weight, price}]
 
-// Dietary
-let array
-let view = [ month, actions, department_name ];
+// Dietary is equal to menu
+// {
+//
+// 		title: "string",
+//
+// 		date: prev_month,
+// 		description: "string",
+// 		// recipes: [],
+// 		notes: "This is notes6",
+//
+// 		// groceryId: ""
+//
+// 	},
+let array = [
+  "title", "date", "description", "recipes", "notes", "grocery_id"
+]
+// let view = [ month, actions, department_name ];
 let view = required('views_array')['shop'];
-let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
+// let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
+
+let calendar = []
 "calendar":
 
 [
