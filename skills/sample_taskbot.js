@@ -1,8 +1,8 @@
 const _ = require('underscore');
 
 
-let dialogos = require('/dialogs/sample-dialog');
-console.log(dialogos);
+// let dialogos = require('/dialogs/sample-dialog');
+// console.log(dialogos);
 
 // let replies =  require('/dialogs/sample-dialog');
 // console.log(dialogos);
@@ -16,27 +16,27 @@ console.log(dialogos);
 
 
 //we're assuming that bot, message are in scope of this functions.
-viewTasks = (err, user) => {
-  bot.reply(message, 'reply');
+// viewTasks = (err, user) => {
+//   bot.reply(message, 'reply');
 
-  // user object can contain arbitary keys. we will store tasks in .tasks
-  if (!user || !user.tasks || user.tasks.length == 0) {
-    // replies[0]
-    bot.reply(message, 'There are no tasks on your list. Say `add _task_` to add something.');
-    next();
-  };
+//   // user object can contain arbitary keys. we will store tasks in .tasks
+//   if (!user || !user.tasks || user.tasks.length == 0) {
+//     // replies[0]
+//     bot.reply(message, 'There are no tasks on your list. Say `add _task_` to add something.');
+//     next();
+//   };
 
 
-  // else {
-    // replies[0]
-    var text = 'Here are your current tasks: \n' +
-        generateTaskList(user) +
-        'Reply with `done _number_` to mark a task completed.';
+//   // else {
+//     // replies[0]
+//     var text = 'Here are your current tasks: \n' +
+//         generateTaskList(user) +
+//         'Reply with `done _number_` to mark a task completed.';
 
-    bot.reply(message, text);
+//     bot.reply(message, text);
 
-  // }
-};
+//   // }
+// };
 
 // addTask = function(err, user){
 //   if (!user) {
@@ -50,32 +50,32 @@ viewTasks = (err, user) => {
 //   saveTask
 // };
 
-completeTask = function(err, user){
-  if (!user) {
-      user = {};
-      user.id = message.user;
-      user.tasks = [];
-  }
+// completeTask = function(err, user){
+//   if (!user) {
+//       user = {};
+//       user.id = message.user;
+//       user.tasks = [];
+//   }
 
-  if (number < 0 || number >= user.tasks.length) {
-      // replies[0]
-      bot.reply(message, 'Sorry, your input is out of range. Right now there are ' + user.tasks.length + ' items on your list.');
-  } else {
+//   if (number < 0 || number >= user.tasks.length) {
+//       // replies[0]
+//       bot.reply(message, 'Sorry, your input is out of range. Right now there are ' + user.tasks.length + ' items on your list.');
+//   } else {
 
-      var item = user.tasks.splice(number,1);
+//       var item = user.tasks.splice(number,1);
 
-      // reply with a strikethrough message...
-      bot.reply(message, '~' + item + '~');
+//       // reply with a strikethrough message...
+//       bot.reply(message, '~' + item + '~');
 
-      if (user.tasks.length > 0) {
-          // replies[0]
-          bot.reply(message, 'Here are our remaining tasks:\n' + generateTaskList(user));
-      } else {
-          // replies[0]
-          bot.reply(message, 'Your list is now empty!');
-      }
-  }
-};
+//       if (user.tasks.length > 0) {
+//           // replies[0]
+//           bot.reply(message, 'Here are our remaining tasks:\n' + generateTaskList(user));
+//       } else {
+//           // replies[0]
+//           bot.reply(message, 'Your list is now empty!');
+//       }
+//   }
+// };
 
 
 // let response = {
@@ -84,19 +84,19 @@ completeTask = function(err, user){
 //   timestamp: message.ts
 // }
 
-saveTask = (err, saved) => {
-  if (err) {
-      // replies[0]
-      bot.reply(message, 'I experienced an error adding your task: ' + err);
-      next();
-  } else {
-      bot.api.reactions.add({
-          name: 'thumbsup',
-          channel: message.channel,
-          timestamp: message.ts
-      });
-  }
-};
+// saveTask = (err, saved) => {
+//   if (err) {
+//       // replies[0]
+//       bot.reply(message, 'I experienced an error adding your task: ' + err);
+//       next();
+//   } else {
+//       bot.api.reactions.add({
+//           name: 'thumbsup',
+//           channel: message.channel,
+//           timestamp: message.ts
+//       });
+//   }
+// };
 
 module.exports = function(controller) {
 

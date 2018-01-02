@@ -4,10 +4,10 @@ module.exports = function(controller) {
 
     controller.on('bot_channel_join', (bot, message) => {
 
-      let inviterId = message.inviter;
+      // let inviterId = message.inviter;
       // let channelId = message.channel;
-      var inviter;
-      inviteMessage(inviter); //will not work and generate an error
+      // var inviter;
+      // inviteMessage(inviter); //will not work and generate an error
       // var channel;
 
         controller.studio
