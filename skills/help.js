@@ -64,23 +64,7 @@ let text = `I'm here to help!\n`;
 module.exports = function(controller) {
 
 
-//   controller.hears(['^help$'],'direct_message,direct_mention,mention', function(bot, message) {
-//     bot.reply(message,'You can say these things to me:\n'+
-//         '\t⦿ *next* – _Fed up with the track? Skip it._\n'+
-//         '\t⦿ *previous* – _Want to hear that again? Just ask._\n'+
-//         '\t⦿ *start again* / *over* – _Missed the beginning of the track? No problem._\n'+
-//         '\t⦿ *volume up* / *down* – _increases / decreases the volume_\n'+
-//         '\t⦿ *set volume* [1-100] – _sets the volume_\n'+
-//         '\t⦿ *status* – _I will tell information about the Spotify player_\n'+
-//         '\t⦿ *info* – _I will tell you about this track_\n'+
-//         '\t⦿ *detail* – _I will tell you more about this track_\n'+
-//         '\t⦿ *play* / *pause* – _plays or pauses the music_\n'+
-//         '\t⦿ *play track* [track name], *play track* [track name] - [artist] – _plays a specific track_\n'+
-//         '\t⦿ *play track* [track name] | [album] – _plays a specific track in the context of an album. You can add_ - [artist] _to either the track or the album to be more specific_\n'+
-//         '\t⦿ *play album* [album name], play album [album name] - artist – _plays a specific album_'
-//         // 'play playlist [playlist name] – plays a specific playlist\n'+
-//     );
-// });
+
   
   
     // This before middleware allows the help command to accept sub-thread names as a parameter
@@ -100,36 +84,41 @@ module.exports = function(controller) {
 
     });
   
-  
-         controller
-         .hears(['help2'],
+    controller
+         .hears(['^help2$'],
                 'direct_message,direct_mention,mention',
                 function(bot, message) {
 
           //var matches = message.match(/^help (.*)/i);
           //var text2 = message.matches[1];
-           debug('bitch');
+          // console.log(matches, text2)
+           
+           
+           // debug('bitch');
            // let response = {[text: array]};
-//            let response = {
-//     "text": help_cookbook
-// }
-           // let response = help_bugbot;
-           // let response = help_cookbook ;
-           // let response = help_dietary ;
-           // let response = help_expenses ;
-           // let response = help_family_budget ;
-           // let response = help_fitness ;
-           // let response = help_idea ;
-           // let response = help_measurements ;
-           // let response = help_recipe_add ;
-           // let response = shopping_list ;
-           // let response = help_restaurant_menu ;
-           // let response = help_video ;
+           
+           // indexes
+          // help_bugbot,
+          // help_cookbook,
+          // help_dietary,
+          // help_expenses,
+          // help_family_budget,
+          // help_fitness,
+          // help_idea,
+          // help_measurements,
+          // help_recipe_add,
+          // shopping_list,
+          // help_restaurant_menu,
+          // help_video 
+           let response = {
+              "text": help[0]
+          }
+            
            
            
            // let response = { text, attachments };
            bot.reply(message, 'Please specify a number.');
-           // bot.reply(message, response);
+           bot.reply(message, response);
             //bot.reply(message, JSON.stringify(text2));
          });
 
