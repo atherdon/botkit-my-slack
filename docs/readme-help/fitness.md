@@ -19,6 +19,13 @@ List of commands (just type help in the channel)
 * `calories` _text_: Track your weight
 * `steps` _text_: Track your weight
 
+* `w` _text_: Track your weight
+* `km` _text_: Track your weight
+* `steps` _text_: Track your weight
+* `yoga` _text_: Track your weight
+* `stretching` _text_: Track your weight **morning routine**
+
+
 ##NOTE
 Start timer while you make workout + beep notification like alarm
 
