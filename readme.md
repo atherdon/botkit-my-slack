@@ -1,3 +1,6 @@
+## Not finished. under heavy development
+https://api.slack.com/docs/messages/builder
+
 # Botkit Starter Kit for Slack Bots
 
 This repo contains everything you need to get started building a Slack bot with [Botkit](https://botkit.ai) and [Botkit Studio](https://botkit.ai).
@@ -116,3 +119,37 @@ You can find full documentation for Botkit on our [GitHub page](https://github.c
 # About Botkit
 
 Botkit is a product of [Howdy](https://howdy.ai) and made in Austin, TX with the help of a worldwide community of botheads.
+
+
+
+
+
+**What can it do?**
+
+it's a clone of bugbot
+
+
+
+List of commands (just type help in the channel)
+
+* `help` : this list
+* `add` : add an issue
+* `auth` : login
+* `issues` : list of all issues
+* `logout` : logout from all
+* `repo` pick : pick a repository to work with
+* `repos` : list of all repositories
+* `alias` : list of all repositories
+* `search` : list of all repositories
+
+
+
+**ADMIN FUNCTIONS**
+
+not at this moment
+* `flush` : flush the current queue
+* `setvolume` _number_ : sets volume
+* `play` : play track
+* `stop` : stop life
+* `next` : play next track
+* `previous` : play previous track
