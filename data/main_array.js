@@ -21,6 +21,7 @@ const _ = require('underscore');
 console.log(array);
 console.log(view);
 let view = required('views_array')['shop'];
+let types = ["finished", "purchased", "available", "draft"];
 // [gl_id, dep_id, ingredient_name]
 // "gl_id": {ingredient_name, department_name}
 
@@ -28,6 +29,8 @@ let view = required('views_array')['shop'];
 let array = [ "id", "date", "title", "monetization", "priority", "settings" ];
 // let view = [ title, priority, monetization ];
 let view = required('views_array')['shop'];
+// this can be similar to priority
+let types = ["high", "middle", "explain-more", "low", "super"];
 // "ideas": {id, date, title, monetization -> yes or no, priority}
 console.log(array);
 console.log(view);
@@ -41,6 +44,9 @@ let array = [
 // let view = [ recipe_title, recipe_image, order_sort ];
 let view = required('views_array')['shop'];
 
+// this is recipe types
+let types = ["slow-cooker", "fast", "easy", "complex"];
+
 console.log(array);
 console.log(view);
 
@@ -52,7 +58,7 @@ let array = [
 ];
 // let view = [ menu_name, {category_name, { dishes_list }} ];
 let view = required('views_array')['shop'];
-
+let types = ["appertisers", "drinks", "coffee", "other"];
 
 console.log(array);
 console.log(view);
@@ -83,6 +89,7 @@ let array = [
 // let view = [ month, actions, department_name ];
 let view = required('views_array')['shop'];
 // let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
+let types = ["low-fat", "carbs", "paleontology", "dont-eath-whole-thing"];
 
 console.log(array);
 console.log(view);
@@ -111,6 +118,7 @@ let calendar = [
 let month = [
   "date", "action", "calories"
 ];
+let types = ["morning", "dinner", "late-night", "after-train"];
 
 console.log(calendar);
 console.log(month);
@@ -143,6 +151,7 @@ let array = ["id", "date", "url", "time short", "who send"];
 let view = [ date, who_send, link_to_browser];
 // [id, date, url, time short, who send]
 let view = required('views_array')['shop'];
+let types = ["entertaiment", "games", "shooters", "music"];
 
 console.log(array);
 console.log(view);
@@ -170,6 +179,7 @@ let view = required('views_array')['shop'];
 let ingredients = ["ingredient", "calories"];
 //@todo add stuff from nutrition scheme
 let nutrition   = [];
+let types = ["allergies-free", "cooking-for-two", "gluthen-free", "sugar-free"];
 
 // [id, date, url, time short, who send]
 
@@ -246,7 +256,8 @@ let advanced_item = [
     "can be configured",
     "converted_to"
 ];
-let type = [];
+// let type = [];
+let types = ["water", "solid", "sipuchee", "complex"];
 // "name" : "kilo, kilogramm, kg"
 
 
