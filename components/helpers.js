@@ -304,14 +304,31 @@ searchResult = (vars, message) => {
 // @todo finish and test and use
 isFieldPresent = (myObj, key_or_value) => {
   console.log(_.contains(['aaa', 'bbb', 'cfp', 'ddd'], 'cfp'));
-  
+
   if (_.some(myObj, function(o) { return _.has(o, "three"); })) {
-  
+
     console.log('vadiaaaa')
-    
+
   }
-  
+
 };
+
+//@todo to test it.
+viewByType = (myObj, type) => {
+
+// myObj.data - contain an arrays of array with a single row
+  let response
+  _.map(myObj.data, item => {
+    if( item.type == type ){
+      response.push(item);
+    }
+
+  });
+
+  return response;
+
+};
+
 
 
 //

@@ -4,7 +4,10 @@
 
 const _ = require('underscore');
 
-
+const views = required('views_array');
+console.log(views);
+console.log(views['shop']);
+// const views = required('views_array')['shop'];
 
 //------------
 // Shopping
