@@ -274,3 +274,11 @@ let view3 = [name, {list of converted sub_names}]
 
 console.log(array);
 console.log(view);
+
+
+
+"Lacto vegetarian"
+"Ovo vegetarian"
+"Paleo"
+"Pescetarian" "Vegan"
+"Vegetarian"
