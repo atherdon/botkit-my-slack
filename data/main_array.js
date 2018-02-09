@@ -53,6 +53,7 @@ let types = ["slow-cooker", "fast", "easy", "complex"];
 console.log(array);
 console.log(view);
 
+
 // Restaurant
 // "menu": ["category_name", {dish_name, weight, price}]
 let array = [
@@ -65,6 +66,7 @@ let types = ["appertisers", "drinks", "coffee", "other"];
 
 console.log(array);
 console.log(view);
+
 
 // Dietary is equal to menu
 // {
@@ -92,7 +94,12 @@ let array = [
 // let view = [ month, actions, department_name ];
 let view = required('views_array')['shop'];
 // let view2 = [ calories, {cooking_list_name, {calorie, item}} ];
-let types = ["low-fat", "carbs", "paleontology", "dont-eath-whole-thing"];
+let types = [
+  "low-fat",
+  "carbs",
+  "paleontology",
+  "dont-eath-whole-thing"
+];
 
 console.log(array);
 console.log(view);
@@ -182,7 +189,12 @@ let view = required('views_array')['shop'];
 let ingredients = ["ingredient", "calories"];
 //@todo add stuff from nutrition scheme
 let nutrition   = [];
-let types = ["allergies-free", "cooking-for-two", "gluthen-free", "sugar-free"];
+let types = [
+  "allergies-free",
+  "cooking-for-two", 
+  "gluthen-free",
+  "sugar-free"
+];
 
 // [id, date, url, time short, who send]
 

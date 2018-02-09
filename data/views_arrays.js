@@ -35,9 +35,9 @@ let view = [ "link", "items", "ULR" ];
 // fitness
 let view  = [ "date", {calories_list} ];
 let view2 = [ "type_name", {
-   [id:"date", value: false],
-   [id:"result", value: false],
-   [id:"calories_burn", value: false]
+   [ id:"date", value: false ],
+   [ id:"result", value: false ],
+   [ id:"calories_burn", value: false ]
  } ];
 
 // measurement
