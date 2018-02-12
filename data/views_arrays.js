@@ -14,7 +14,9 @@ let view = [ "title", "priority", "monetization" ];
 let view = [ "recipe_title", "recipe_image", "order_sort" ];
 
 // restaurant
-let view = [ "menu_name", { [id:"category_name", value:false], { id:"dishes_list", value: false } } ];
+let view = [ "menu_name", {
+   [ id : "category_name", value : false ], { id:"dishes_list", value: false } 
+ } ];
 
 // dietary
 let view = [ "month", "actions", "department_name" ];

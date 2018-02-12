@@ -81,6 +81,7 @@ let help_fitness = 'You can say these things to me(just type help in the channel
     '\t⦿ `steps` _text_: Track your weight\n'
     ;
 
+
 let help_idea = 'You can say these things to me(just type help in the channel):\n'+
     '\tList of commands\n'+
     '\t⦿ `help` : this list\n'+
@@ -183,5 +184,5 @@ module.exports = [
   help_recipe_add,
   shopping_list,
   help_restaurant_menu,
-  help_video   
+  help_video
 ];
