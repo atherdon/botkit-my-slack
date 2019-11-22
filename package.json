@@ -14,7 +14,7 @@
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "express": "^4.16.3",
-    "express-hbs": "^1.0.4",
+    "express-hbs": "^2.3.0",
     "node-env-file": "^0.1.8",
     "querystring": "^0.2.0",
     "request": "^2.85.0",
